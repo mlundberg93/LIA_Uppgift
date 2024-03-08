@@ -14,9 +14,12 @@ namespace LIA_Uppgift
 
             XmlNode search = xmlDoc.SelectSingleNode("//trans-unit[@id='42007']/target");
             string value = search.InnerText;
-            Console.WriteLine("value: " + value);
-            Console.ReadLine();
 
+            string createFile = "XML-Data.txt";
+            File.WriteAllText(createFile, value);
+
+            Console.WriteLine($"The data {value} has been saved to the file {createFile}");
+            Console.ReadLine();
         }
     }
 }
