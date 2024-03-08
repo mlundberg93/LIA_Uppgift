@@ -19,6 +19,7 @@ namespace LIA_Uppgift
             File.WriteAllText(createFile, value);
 
             Console.WriteLine($"The data {value} has been saved to the file {createFile}");
+            Console.WriteLine("Press enter to exit..");
             Console.ReadLine();
         }
     }
