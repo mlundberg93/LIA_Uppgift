@@ -1,5 +1,4 @@
-﻿using System.Text;
-using System.Xml;
+﻿using System.Xml;
 
 namespace LIA_Uppgift
 {
@@ -12,6 +11,11 @@ namespace LIA_Uppgift
 
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(docPath);
+
+            XmlNode search = xmlDoc.SelectSingleNode("//trans-unit[@id='42007']/target");
+            string value = search.InnerText;
+            Console.WriteLine("value: " + value);
+            Console.ReadLine();
 
         }
     }
